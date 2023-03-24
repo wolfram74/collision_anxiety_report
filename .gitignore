@@ -132,4 +132,3 @@ dmypy.json
 src/settings.py
 .DS_Store
 *_archive
-*_archive

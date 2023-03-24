@@ -119,7 +119,8 @@ def generate_bar_chart(distances):
     figure, subplots = pyplot.subplots(1)
     subplots.set_xlabel('kilometers', fontsize=16)
     subplots.set_ylabel('satellites', fontsize=16)
-    subplots.set_title('Number of Close Approaches', fontsize=16)
+    subplots.set_title(
+        'Number of Close Approaches for 200 Satellites', fontsize=16)
     # bar_labels = list(x_vals)
     bar_labels = [' ']*10
     bar_labels[0] = '<%.0f km'%x_vals[1]
@@ -133,6 +134,9 @@ def generate_bar_chart(distances):
     subplots.bar_label(bar_objects, bar_labels)
     pyplot.savefig(
         './bar_chart_archive/'+'collision_anxiety_'+todays_prefix()+'.png'
+        )
+    pyplot.savefig(
+        '../docs/images/today.png'
         )
 
 def generate_heat_map(dist_matrix):
